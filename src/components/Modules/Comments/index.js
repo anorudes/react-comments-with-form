@@ -39,19 +39,19 @@ export class Comments extends Component {
       />
     );
 
-    const renderComments = (parentCommentId) => {
+    const renderComments = (parentComment) => {
       // It is inner comments or not?
 
-      const renderCommentsList = comments.filter(comment => parentCommentId
-        ? comment.parentId && comment.parentId === parentCommentId
+      const renderCommentsList = comments.filter(comment => parentComment
+        ? comment.parentId && comment.parentId === parentComment.id
         : !comment.parentId);
 
       if (!renderCommentsList.length) return false;
 
       return (
         <div className={cx(
-          { [s.comments]: !parentCommentId },
-          { [s.innerComments]: parentCommentId },
+          { [s.comments]: !parentComment },
+          { [s.innerComments]: parentComment },
         )}>
           {
             renderCommentsList.map(comment => (
@@ -61,9 +61,9 @@ export class Comments extends Component {
                   handleReply={this.handleReply}
                   showReplyForm={showReplyFormForCommentId === comment.id}
                   AddCommentForm={AddCommentForm}
-                  replyName={parentCommentId && `${comment.author.firstName} ${comment.author.lastName}`}
+                  replyName={parentComment && `${parentComment.author.firstName} ${parentComment.author.lastName}`}
                 />
-                {renderComments(comment.id)}
+                {renderComments(comment)}
               </div>
             ))
           }
