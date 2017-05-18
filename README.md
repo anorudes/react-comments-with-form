@@ -11,4 +11,4 @@ See src/components/*
 
 ## Demo
 
-![screenshot](https://raw.githubusercontent.com/anorudes/comments-with-form/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/anorudes/comments-with-form/master/demo.png)
