@@ -1,43 +1,35 @@
 [{
     "id": 1,
-    "author": { "firstName": "Firstname", "lastName": "Lastname", "userpicUrl": "https://ucarecdn.com/d3a8399b-e0d9-428a-ac37-8cf597484242/", "id": "7da0a826-925f-46f1-97ca-2a71208dfbfa", "idHash": "bc7e15h0c31" },
-    "text": "Test comment 1",
-    "postId": "1c6389b2-30c9-409c-984e-8cd4bb398928",
-    "authorId": "7da0a826-925f-46f1-97ca-2a71208dfbfa",
+    "author": { "firstName": "Andrew", "lastName": "Rayel", "userpic": "https://ucarecdn.com/99fd17a1-8185-43d0-8cee-e2e8b96256db/-/resize/48x/-/progressive/yes/-/format/jpeg/avatar.jpg", "id": "" },
+    "text": "Good morning!",
+    "postId": "",
+    "authorId": "",
     "createdAt": 1495068834710
   },
   {
     "id": 2,
-    "author": { "firstName": "Firstname", "lastName": "Lastname", "userpicUrl": "https://ucarecdn.com/d3a8399b-e0d9-428a-ac37-8cf597484242/", "id": "7da0a826-925f-46f1-97ca-2a71208dfbfa", "idHash": "bc7e15h0c31" },
-    "text": "Test comment 2",
-    "postId": "1c6389b2-30c9-409c-984e-8cd4bb398928",
-    "authorId": "7da0a826-925f-46f1-97ca-2a71208dfbfa",
+    "author": { "firstName": "", "lastName": "Lastname", "userpic": "https://ucarecdn.com/d3a8399b-e0d9-428a-ac37-8cf597484242/", "id": "" },
+    "text": "Test comment",
+    "postId": "utils/pluralize.js",
+    "authorId": "",
     "createdAt": 1495088734710
   },
   {
     "id": 3,
-    "author": { "firstName": "Firstname", "lastName": "Lastname", "userpicUrl": "https://ucarecdn.com/d3a8399b-e0d9-428a-ac37-8cf597484242/", "id": "7da0a826-925f-46f1-97ca-2a71208dfbfa", "idHash": "bc7e15h0c31" },
-    "text": "Test comment 3",
-    "postId": "1c6389b2-30c9-409c-984e-8cd4bb398928",
-    "authorId": "7da0a826-925f-46f1-97ca-2a71208dfbfa",
-    "parentId": 2,
+    "author": { "firstName": "Chou", "lastName": "Tzu-yu", "userpic": "https://ucarecdn.com/7daa0865-d744-4d44-844a-44ba93c3bfc9/-/resize/48x/-/progressive/yes/-/format/jpeg/avatar.jpg", "id": "" },
+    "text": "Hello! =)",
+    "postId": "",
+    "authorId": "",
+    "parentId": 1,
     "createdAt": 1494088834710
   },
   {
     "id": 4,
-    "author": { "firstName": "Firstname", "lastName": "Lastname", "userpicUrl": "https://ucarecdn.com/d3a8399b-e0d9-428a-ac37-8cf597484242/", "id": "7da0a826-925f-46f1-97ca-2a71208dfbfa", "idHash": "bc7e15h0c31" },
-    "text": "Test comment 3",
-    "postId": "1c6389b2-30c9-409c-984e-8cd4bb398928",
-    "authorId": "7da0a826-925f-46f1-97ca-2a71208dfbfa",
-    "parentId": 2,
+    "author": { "firstName": "Chou", "lastName": "Tzu-yu", "userpic": "https://ucarecdn.com/7daa0865-d744-4d44-844a-44ba93c3bfc9/-/resize/48x/-/progressive/yes/-/format/jpeg/avatar.jpg", "id": "" },
+    "text": "How are you?",
+    "postId": "",
+    "authorId": "",
+    "parentId": 1,
     "createdAt": 1494088834710
-  },
-  {
-    "id": 5,
-    "author": { "firstName": "Firstname", "lastName": "Lastname", "userpicUrl": "https://ucarecdn.com/d3a8399b-e0d9-428a-ac37-8cf597484242/", "id": "7da0a826-925f-46f1-97ca-2a71208dfbfa", "idHash": "bc7e15h0c31" },
-    "text": "Test comment 5",
-    "postId": "1c6389b2-30c9-409c-984e-8cd4bb398928",
-    "authorId": "7da0a826-925f-46f1-97ca-2a71208dfbfa",
-    "createdAt": 1495088734710
   }
 ]

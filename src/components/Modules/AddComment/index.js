@@ -7,9 +7,9 @@ import s from './styles.mscss';
 export class AddComment extends Component {
   static propTypes = {
     parentId: PropTypes.number,
-    postId: PropTypes.string,
     isReply: PropTypes.bool,
     showSocialPopup: PropTypes.func,
+    handleSubmit: PropTypes.func,
   };
 
   constructor(props) {
@@ -21,7 +21,13 @@ export class AddComment extends Component {
   }
 
   handleSubmit = () => {
-    // TODO: your magic
+    const { parentId, handleSubmit } = this.props;
+    const { text } = this.state;
+
+    handleSubmit({
+      parentId,
+      text,
+    });
   }
 
   handleChange = (event) => {

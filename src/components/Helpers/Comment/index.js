@@ -24,7 +24,7 @@ function Comment({
     <div className={s.root}>
       <div className={s.author}>
         <div className={s.authorUserpic}>
-          <img src={`${author.userpicUrl}-/resize/48x/-/progressive/yes/-/format/jpeg/avatar.jpg`} />
+          <img src={author.userpic} />
         </div>
 
         <div className={s.authorInfo}>

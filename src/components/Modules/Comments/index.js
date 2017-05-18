@@ -8,7 +8,6 @@ import s from './styles.mscss';
 export class Comments extends Component {
   static propTypes = {
     comments: PropTypes.array,
-    postId: PropTypes.string,
   };
 
   constructor(props) {
@@ -28,15 +27,15 @@ export class Comments extends Component {
   }
 
   render() {
-    const { comments, postId } = this.props;
+    const { comments } = this.props;
     const { showReplyFormForCommentId } = this.state;
 
     const AddCommentForm = ({ parentId, isReply }) => (
       <AddComment
         {...this.props}
-        postId={postId}
         parentId={parentId}
         isReply={isReply}
+        handleSubmit={() => console.log('your magic')}
       />
     );
 
@@ -61,7 +60,6 @@ export class Comments extends Component {
                   {...comment}
                   handleReply={this.handleReply}
                   showReplyForm={showReplyFormForCommentId === comment.id}
-                  postId={postId}
                   AddCommentForm={AddCommentForm}
                   replyName={parentCommentId && `${comment.author.firstName} ${comment.author.lastName}`}
                 />
