@@ -56,7 +56,7 @@ export class AddComment extends Component {
           placeholder="Your message"
           onChange={this.handleChange}
           className={cx(s.text, { [s.small]: isReply })}
-          rows={isReply ? 1 : 4}
+          rows={isReply ? 1 : 3}
           maxRows={5}
         />
 

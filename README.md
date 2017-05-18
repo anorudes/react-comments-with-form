@@ -1,4 +1,4 @@
-Example comments + add comment form
+Example comments + autosize add comment form
 =========================
 
 ## Source
