@@ -1,0 +1,16 @@
+{
+  "presets": ["react", "es2015" , "stage-0"],
+  "plugins": [
+    "array-includes",
+    "transform-decorators-legacy",
+    "transform-object-rest-spread",
+    ["babel-plugin-webpack-alias", { "config": "./webpack/alias.config.js", "findConfig": true }]
+  ],
+  "env": {
+    "development": {
+    },
+    "start": {
+      "presets": ["react-hmre"]
+    }
+  }
+}

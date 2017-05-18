@@ -1,0 +1,22 @@
+.root {
+  position: relative;
+}
+
+.addComment {
+  margin-bottom: 12px;
+}
+
+.comments {
+  position: relative;
+
+}
+
+.innerComments {
+  position: relative;
+  padding-left: 80px;
+
+  .innerComments {
+    padding-left: 0;
+  }
+}
+

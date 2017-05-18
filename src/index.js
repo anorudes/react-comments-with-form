@@ -1,9 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import Comments from './components/Modules/Comments';
+import comments from './comments';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+import s from './styles.mscss';
+
+if (__CLIENT__) {
+  ReactDOM.render(
+    <div className={s.app}>
+      <Comments comments={comments} />
+    </div>,
+    document.getElementById('root')
+  );
+}
