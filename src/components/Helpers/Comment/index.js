@@ -15,10 +15,7 @@ function Comment({
   replyName,
 }) {
   const formatter = getTimeAgoFormatter('en');
-  let commentText = text.split('\n').join('<br />');
-  if (replyName) {
-    commentText = `<i>${replyName}</i>, ` + commentText;
-  }
+  const commentText = text.split('\n').join('<br />');
 
   return (
     <div className={s.root}>
@@ -45,7 +42,7 @@ function Comment({
         <div
           className={s.text}
           dangerouslySetInnerHTML={{
-            __html: commentText,
+            __html: `${replyName ? `<i>${replyName}</i>, ` : ''} ${commentText}`,
           }}
         />
 
