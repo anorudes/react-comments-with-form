@@ -100,13 +100,6 @@ const commonConfig = {
         hash: 'sha512',
         digest: 'hex',
       },
-    }, {
-      test: /packery/,
-      loader: 'imports-loader',
-      options: {
-        define: '>false',
-        this: '>window',
-      },
     }],
   },
 
@@ -159,7 +152,7 @@ PROJECTS.map(project => {
   }
 });
 
-if (workingMode === 'dev') { 
+if (workingMode === 'dev') {
   resultConfig.plugins.push(
     new webpack.HotModuleReplacementPlugin()
   );
