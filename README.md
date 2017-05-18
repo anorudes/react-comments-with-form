@@ -1,4 +1,5 @@
 Example comments + add comment form
+=========================
 
 ## Source
 
@@ -10,4 +11,4 @@ See src/components/*
 
 ## Demo
 
-![screenshot](https://raw.githubusercontent.com/anoru/comments-with-form/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/anorudes/comments-with-form/master/screenshot.png)
