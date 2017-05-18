@@ -63,7 +63,7 @@ export class Comments extends Component {
                   showReplyForm={showReplyFormForCommentId === comment.id}
                   postId={postId}
                   AddCommentForm={AddCommentForm}
-                  replyName={comment && `${comment.author.firstName} ${comment.author.lastName}`}
+                  replyName={parentCommentId && `${comment.author.firstName} ${comment.author.lastName}`}
                 />
                 {renderComments(comment.id)}
               </div>

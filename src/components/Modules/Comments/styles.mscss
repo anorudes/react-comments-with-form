@@ -13,7 +13,7 @@
 
 .innerComments {
   position: relative;
-  padding-left: 80px;
+  padding-left: 65px;
 
   .innerComments {
     padding-left: 0;
