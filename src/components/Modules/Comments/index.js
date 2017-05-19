@@ -26,58 +26,57 @@ export class Comments extends Component {
     });
   }
 
-  render() {
+  renderComments = (parentComment) => {
     const { comments } = this.props;
     const { showReplyFormForCommentId } = this.state;
+    // It is inner comments or not?
 
-    const AddCommentForm = ({ parentId, isReply }) => (
-      <AddComment
-        {...this.props}
-        parentId={parentId}
-        isReply={isReply}
-        handleSubmit={() => console.log('your magic')}
-      />
+    const renderCommentsList = comments.filter(comment => parentComment
+      ? comment.parentId && comment.parentId === parentComment.id
+      : !comment.parentId);
+
+    if (!renderCommentsList.length) return false;
+
+    return (
+      <div className={cx(
+        { [s.comments]: !parentComment },
+        { [s.innerComments]: parentComment },
+      )}>
+        {
+          renderCommentsList.map(comment => (
+            <div key={comment.id}>
+              <Comment
+                {...comment}
+                handleReply={this.handleReply}
+                showReplyForm={showReplyFormForCommentId === comment.id}
+                AddCommentForm={this.renderAddComment}
+                replyName={parentComment && `${parentComment.author.firstName} ${parentComment.author.lastName}`}
+              />
+              {this.renderComments(comment)}
+            </div>
+          ))
+        }
+      </div>
     );
+  }
 
-    const renderComments = (parentComment) => {
-      // It is inner comments or not?
+  renderAddComment = ({ parentId, isReply } = {}) => (
+    <AddComment
+      {...this.props}
+      parentId={parentId}
+      isReply={isReply}
+      handleSubmit={() => console.log('your magic')}
+    />
+  )
 
-      const renderCommentsList = comments.filter(comment => parentComment
-        ? comment.parentId && comment.parentId === parentComment.id
-        : !comment.parentId);
-
-      if (!renderCommentsList.length) return false;
-
-      return (
-        <div className={cx(
-          { [s.comments]: !parentComment },
-          { [s.innerComments]: parentComment },
-        )}>
-          {
-            renderCommentsList.map(comment => (
-              <div key={comment.id}>
-                <Comment
-                  {...comment}
-                  handleReply={this.handleReply}
-                  showReplyForm={showReplyFormForCommentId === comment.id}
-                  AddCommentForm={AddCommentForm}
-                  replyName={parentComment && `${parentComment.author.firstName} ${parentComment.author.lastName}`}
-                />
-                {renderComments(comment)}
-              </div>
-            ))
-          }
-        </div>
-      );
-    };
-
+  render() {
     return (
       <div className={s.root}>
         <div className={s.addComment}>
-          <AddCommentForm />
+          { this.renderAddComment() }
         </div>
 
-        { renderComments() }
+        { this.renderComments() }
       </div>
     );
   }
