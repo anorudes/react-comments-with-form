@@ -20,9 +20,16 @@ export class AddComment extends Component {
     };
   }
 
+  componentDidMount() {
+    const { isReply } = this.props;
+    isReply && this.refs.root.querySelector('textarea').focus();
+  }
+
   handleSubmit = () => {
     const { parentId, handleSubmit } = this.props;
     const { text } = this.state;
+
+    this.setState({ text: '' });
 
     handleSubmit({
       parentId,
@@ -44,7 +51,7 @@ export class AddComment extends Component {
     const buttonDisabled = isReply && !text;
 
     return (
-      <div className={s.root}>
+      <div className={s.root} ref="root">
         {
           !isReply &&
             <span className={s.title}>
@@ -58,6 +65,7 @@ export class AddComment extends Component {
           className={cx(s.text, { [s.small]: isReply })}
           rows={isReply ? 1 : 3}
           maxRows={5}
+          value={text}
         />
 
         <div className={s.buttonContainer}>
