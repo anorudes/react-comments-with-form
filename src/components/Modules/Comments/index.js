@@ -29,7 +29,7 @@ export class Comments extends Component {
   handleAdd = () => {
     this.handleReply();
 
-    console.log('your magic')
+    console.log('your magic');
   }
 
   renderComments = (parentComment) => {
