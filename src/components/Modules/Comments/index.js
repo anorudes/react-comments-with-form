@@ -26,6 +26,12 @@ export class Comments extends Component {
     });
   }
 
+  handleAdd = () => {
+    this.handleReply();
+
+    console.log('your magic')
+  }
+
   renderComments = (parentComment) => {
     const { comments } = this.props;
     const { showReplyFormForCommentId } = this.state;
@@ -65,7 +71,7 @@ export class Comments extends Component {
       {...this.props}
       parentId={parentId}
       isReply={isReply}
-      handleSubmit={() => console.log('your magic')}
+      handleSubmit={this.handleAdd}
     />
   )
 
